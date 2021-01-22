@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Menus
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Menus</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+
+    <ion-card *ngFor="let datas of datas;">
+        <ion-card-content (click)="goto(datas.id);">
+            <ion-card-header>
+                <ion-card-title>{{datas.nombre}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <label>
+
+                </label>
+            </ion-card-content>
+            <ion-item>
+                <ion-title>Descripcion</ion-title>
+                <ion-label>{{datas.descripcion}}</ion-label>
+            </ion-item>
+
+        </ion-card-content>
+    </ion-card>
+
+
+
+</ion-content>
